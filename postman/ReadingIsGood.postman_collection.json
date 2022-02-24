@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "37e34662-933a-48f9-a84e-ff7aa6a625eb",
+		"name": "ReadingIsGood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "BookApi",
+			"item": [
+				{
+					"name": "http://localhost:8081/api/book/updateBookStock",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"stockCount\": 20\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/book/updateBookStock",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"book",
+								"updateBookStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/api/book/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n \n  \"author\": \"Hakan\",\n  \"title\": \"SampleBook\",\n  \"stockCount\": 3\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/book/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"book",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderApi",
+			"item": [
+				{
+					"name": "http://localhost:8081/api/order/getByID?orderID=1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/order/getByID?orderID=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"order",
+								"getByID"
+							],
+							"query": [
+								{
+									"key": "orderID",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/api/order/getByDate?startDate=2022-01-24T20%3A55%3A04&endDate=2022-02-24T20%3A55%3A04",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/order/getByDate?startDate=2022-01-24T20%3A55%3A04&endDate=2022-02-24T20%3A55%3A04",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"order",
+								"getByDate"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2022-01-24T20%3A55%3A04"
+								},
+								{
+									"key": "endDate",
+									"value": "2022-02-24T20%3A55%3A04"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/api/order/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerID\": 1,\n  \"bookOrderDTOList\": [\n    {\n      \"quantity\": 1,\n      \"bookID\": 1\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/order/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CustomerApi",
+			"item": [
+				{
+					"name": "http://localhost:8081/api/customer/create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"customerName\": \"Hakan Arayici\",\n  \"customerNo\": \"50\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/customer/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8081/api/customer/getOrdersByCustomerNo?customerNo=1&page=0&pageSize=2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/customer/getOrdersByCustomerNo?customerNo=1&page=0&pageSize=2&",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"customer",
+								"getOrdersByCustomerNo"
+							],
+							"query": [
+								{
+									"key": "customerNo",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StatisticsApi",
+			"item": [
+				{
+					"name": "http://localhost:8081/api/statistics/get?customerNo=1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoYWthbmFyYXlpY2kiLCJleHAiOjE2NDU3NDAzNjIsImlhdCI6MTY0NTczODU2Mn0.wee0FOXA0_g7Ohlqj19fyORtTC7P7e_W0yPuYww-A5F3wg8TB9OdH3ZtAfTJ4l9J0it9i_kw2oVTkOue8P3x4Q",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/api/statistics/get?customerNo=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"statistics",
+								"get"
+							],
+							"query": [
+								{
+									"key": "customerNo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AuthenticationApi",
+			"item": [
+				{
+					"name": "http://localhost:8081/authenticate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"hakanarayici\",\n  \"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8081/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
